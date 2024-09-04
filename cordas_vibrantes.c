@@ -1,6 +1,11 @@
 /*
 é preciso da biblioteca alsa/asound 
 sudo apt install libasound2-dev
+
+Compilando:
+gcc -o [ARQUIVO_DE_SAIDA] [ARQUIVO_A_SER_COMPILADO] [DEPENDENCIAS_A_SEREM_COMPILADAS] [FLAGS_DE_LIBS]
+Ex.:
+gcc -o cordas cordas_vibrantes.c caninos_time.c labrador_adc.c -lasound -lm
 */
 
 #include <math.h>
