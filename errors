@@ -1,0 +1,32 @@
+Erro com caninos-sdk v0.5.0 e gpiod v1.5.4
+Traceback (most recent call last):
+  File "/home/caninos/exp_fis/experimentos_fisica/reacao_motora.py", line 8, in <module>
+    labrador.pin3.enable_gpio(k9.Pin.Direction.OUTPUT, alias="led")
+  File "/home/caninos/.local/lib/python3.9/site-packages/caninos_sdk/pin.py", line 94, in enable_gpio
+    self.gpiod_enable_gpio(direction)
+  File "/home/caninos/.local/lib/python3.9/site-packages/caninos_sdk/pin.py", line 112, in gpiod_enable_gpio
+    self.gpiod_pin = chip_device.get_lines([self.line_id])
+  File "/home/caninos/.local/lib/python3.9/site-packages/gpiod/libgpiodcxx/__init__.py", line 242, in get_lines
+    lines.append(self.get_line(it))
+  File "/home/caninos/.local/lib/python3.9/site-packages/gpiod/libgpiodcxx/__init__.py", line 201, in get_line
+    raise IndexError("line offset out of range")
+IndexError: line offset out of range
+
+
+erro com caninos-sdk alterada para gpiod v2.2.1
+Traceback (most recent call last):
+  File "/home/caninos/exp_fis/experimentos_fisica/reacao_motora.py", line 8, in <module>
+    labrador.pin3.enable_gpio(k9.Pin.Direction.OUTPUT, alias="led")
+  File "/home/caninos/.local/lib/python3.9/site-packages/caninos_sdk/pin.py", line 94, in enable_gpio
+    self.gpiod_enable_gpio(direction)
+  File "/home/caninos/.local/lib/python3.9/site-packages/caninos_sdk/pin.py", line 119, in gpiod_enable_gpio
+    with gpiod.request_lines(
+  File "/home/caninos/.local/lib/python3.9/site-packages/gpiod/__init__.py", line 54, in request_lines
+    return chip.request_lines(*args, **kwargs)
+  File "/home/caninos/.local/lib/python3.9/site-packages/gpiod/chip.py", line 257, in request_lines
+    [
+  File "/home/caninos/.local/lib/python3.9/site-packages/gpiod/chip.py", line 258, in <listcomp>
+    self.line_offset_from_id(line)
+  File "/home/caninos/.local/lib/python3.9/site-packages/gpiod/chip.py", line 144, in line_offset_from_id
+    raise ValueError("line offset of out range")
+ValueError: line offset of out range
