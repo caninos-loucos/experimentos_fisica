@@ -1,4 +1,7 @@
-
+/*
+é preciso da biblioteca alsa/asound 
+sudo apt install libasound2-dev
+*/
 
 #include <math.h>
 #include <stdlib.h>
